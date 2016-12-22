@@ -3,9 +3,6 @@ package Baum;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by marten.reinlaender on 21.12.2016.
- */
 public class Product {
 
     private String name;
@@ -15,7 +12,7 @@ public class Product {
     private int count;
     private List<String> tags;
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
@@ -69,11 +66,11 @@ public class Product {
         this.model = "";
         this.size = 0;
         this.count = 42;
-        this.tags = new ArrayList<String>();
+        this.tags = new ArrayList<>();
     }
 
     public void addTag(String newTag){
-        if(!tags.stream().anyMatch( tag -> tag == newTag)) {
+        if(tags.stream().noneMatch( tag -> tag.equals(newTag))) {
             this.tags.add(newTag);
         }
     }

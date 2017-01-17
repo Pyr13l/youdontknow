@@ -9,8 +9,9 @@ import java.util.List;
 @SpringBootApplication
 public class Application {
 
-    static List<Product> products;
-    static void main(String[] args){
+    public static List<Product> products;
+
+    public static void main(String[] args){
         products = new ArrayList<Product>(){{
             for (int i = 0; i < 10; i++){
                 add(new Product());
@@ -21,8 +22,8 @@ public class Application {
         products.get(0).addTag("Baum");
         products.get(0).addTag("Horst");
         products.get(0).addTag("Baum");
+        products.get(1).addTag("Baum");
 
         SpringApplication.run(Application.class, args);
     }
-
 }

@@ -12,9 +12,7 @@ public class Product {
     private int count;
     private List<String> tags;
 
-    String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
@@ -61,9 +59,9 @@ public class Product {
     }
 
     public Product(){
-        this.name = "";
-        this.cut = "";
-        this.model = "";
+        this.name = "name";
+        this.cut = "schnitt";
+        this.model = "modell";
         this.size = 0;
         this.count = 42;
         this.tags = new ArrayList<>();
